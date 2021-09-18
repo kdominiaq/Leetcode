@@ -1,0 +1,34 @@
+class Solution:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+
+        len_nums1 = len(nums1)
+        len_nums2 = len(nums2)
+
+        results_nums = list()
+                
+        for itr in range(0, len_nums1 + len_nums2):
+            # checking numbers of element in nums1, if empty and nums2 has element append element from nums2
+            if not nums1 and nums2:
+                results_nums.append(nums2[0])
+                nums2.pop(0)
+                continue   
+                
+            # checking numbers of element in nums2, if empty and nums1 has element append element from nums1
+            if not nums2 and nums1:
+                results_nums.append(nums1[0])
+                nums1.pop(0)
+                continue
+            # checking which element from lists is grater
+            if nums1[0] <= nums2[0]:
+                results_nums.append(nums1[0])
+                nums1.pop(0)
+                
+            else:
+                results_nums.append(nums2[0])
+                nums2.pop(0)
+                
+        # checking numbers of elements in the final list, if is old easy peasy, if not it's necessary to take 2 middle elements, add and derivative by 2     
+        if len(results_nums) % 2 != 0:
+            return (results_nums[int((len(results_nums)-1)/ 2)])
+        else: 
+            return ((results_nums[int((len(results_nums)-1)/ 2)]) + (results_nums[int((len(results_nums))/ 2)])) /2
