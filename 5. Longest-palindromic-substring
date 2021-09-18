@@ -1,0 +1,36 @@
+class Solution:
+    def longestPalindrome(self, s: str) -> str:
+        to_check = list()
+        longest_pali = list()
+        is_pali = True
+
+        longest_pali_counter = 0
+        len_s = len(s)
+
+        for letter in range(0, len_s + 1):
+            if len_s - letter <= longest_pali_counter:
+                break 
+
+            for ele in reversed(range(letter, len(s) + 1)):
+                to_check = s[letter:ele]
+                if longest_pali_counter >= len(to_check):
+                    break
+                    
+                is_pali = True
+                l_to_check = len(to_check)
+                
+                itr_from_end = l_to_check - 1
+                for itr_from_start in range(0, l_to_check):
+                    if to_check[itr_from_start] != to_check[itr_from_end]:
+                        is_pali = False
+                        break
+                    itr_from_end -= 1
+                        
+                if is_pali:
+                    if len(to_check) > longest_pali_counter:
+                        longest_pali_counter = l_to_check
+                        longest_pali = to_check
+
+        
+        return longest_pali
+
