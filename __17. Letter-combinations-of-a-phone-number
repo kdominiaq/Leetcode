@@ -17,7 +17,7 @@ class Solution:
         
         # if digits has only one digit return list form letter by id
         if int(digits) < 10:
-            return letters[digits]
+            return letters[int(digits)]
         
         # create first layer of the digit and skip this  in while loop
         nb_of_itr = len(digits) 
