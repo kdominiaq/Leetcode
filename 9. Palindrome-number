@@ -1,0 +1,24 @@
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        number = str(x)
+        number_len = len(number) 
+        
+        is_palindrome = True
+        
+        # checking the sign of the number, if number is  less then 0 return False
+        if x < 0:
+            return False
+        
+        # seperate task gor two option: odd and even
+        if number_len % 2 != 0:
+            number_len -= 1
+            for i in range(0,  int((number_len) / 2 )):
+                if not number[i] == number[number_len - i]:
+                    is_palindrome = False
+        else: 
+            number_len -= 1
+            for i in range(0,  int((number_len) / 2) + 1):
+                 if not number[i] == number[number_len - i]:
+                    is_palindrome = False
+                    
+        return is_palindrome
