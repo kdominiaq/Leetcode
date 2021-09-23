@@ -30,7 +30,6 @@ class Solution:
                     if len(to_check) > longest_pali_counter:
                         longest_pali_counter = l_to_check
                         longest_pali = to_check
-
-        
+                        
         return longest_pali
 
