@@ -1,2 +1,2 @@
 # Leetcode
-## At least one algorithmic challenge from the leetcode website by day. #Python
+## At least one algorithmic challenge from the leetcode website per day. #Python
