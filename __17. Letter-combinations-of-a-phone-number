@@ -35,6 +35,5 @@ class Solution:
                     print(i+j)
             itr += 1
             
-        return final
-                
-        
+        return final              
+   
