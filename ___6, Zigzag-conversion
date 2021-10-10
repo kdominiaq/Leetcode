@@ -1,0 +1,49 @@
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        # explain for s = PAYPALISHIRING, and numRows = 4
+        # P     I    N
+        # A   L S  I G
+        # Y A   H R
+        # P     I
+        seperate_s = ['']
+        seperate_rows = [str()]*numRows
+        itr_sep = 0
+        result = str()
+        s_len = len(s)
+        
+        if s_len == 1:
+            return s
+       
+        iteration = 0
+        itr_rows = 0
+        # numbers of letters in one zigzag is numRows * 2 - 2, so every time if the module of iteration is equal to that, code has to create another space for zigzag, so after this block of code seperate_s = ['PAYPAL', 'ISHIRI', 'NG']
+        # separeting s to list of lists (numbers of list depends on numRows)
+        for itr, letter in enumerate(s):
+            iteration += 1
+            seperate_s[itr_rows] += letter
+            
+            # only happen if len(s) = 2, so it's only posibble to return s, becasue it's not posiible to zig that short string
+            if (numRows * 2 - 2) == 0:
+                return s
+            if iteration % (numRows * 2 - 2) == 0:
+                itr_rows += 1
+                seperate_s.append('')
+        
+         
+        # saving letter in correct lists
+        for group in seperate_s:
+            index = 0
+            iterator = 1 
+            for letter in group:
+                seperate_rows[index] += letter
+                # numRows - 1 becasue itaration by list start from 0, so if numRows = 3, iteratrion will be 0, 1, 2.
+                if index == numRows - 1:
+                    iterator = -1
+                index += iterator 
+            
+        for row in seperate_rows:
+            result += row 
+                                     
+                    
+        return result
+        
