@@ -49,5 +49,4 @@ class Solution:
             else:
                 l3 = ListNode(ele, l3)
         
-      
         return l3
