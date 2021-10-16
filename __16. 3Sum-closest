@@ -1,12 +1,10 @@
 class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
         
-       
         collecting_sum_lists = []
         smallest_difference  = int()
         closest_to_target = int()
        
-        
         def Solution(numbers, collecting_list):
             while len(numbers) >= 3:
                 
