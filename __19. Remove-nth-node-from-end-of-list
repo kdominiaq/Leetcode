@@ -17,10 +17,8 @@ class Solution:
         # decide which node from end is to remove, '-1' cuz nodes are itered by the '0'
         itr =  n - 1
 
-        
         # reverse the value of the node for correct save 
         nodes_to_save.reverse()
-        
         
         result = None
         for i, ele in enumerate(nodes_to_save):
@@ -30,5 +28,4 @@ class Solution:
             elif i != itr and i != itr:
                 result = ListNode(ele, result)
                     
-
         return result
