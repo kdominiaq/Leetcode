@@ -30,6 +30,5 @@ class Solution:
                                     
                                     if not is_dupicate: 
                                          result.append(result_step)
-
                                     
         return result
