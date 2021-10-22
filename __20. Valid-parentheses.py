@@ -29,8 +29,6 @@ class Solution:
                             s.pop(itr - 1)
                             previos_remove = True
 
-
-
             if len(s) == 0:
                 return True
             else:
