@@ -20,6 +20,3 @@ class Solution:
                 end_index = itr
 
         return [start_index, end_index]
-            
-        
-            
