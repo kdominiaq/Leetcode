@@ -1,7 +1,6 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         longest_substring_counter = 0
-        
         nonrepeating_letters =[]
 
         for letter in s:
