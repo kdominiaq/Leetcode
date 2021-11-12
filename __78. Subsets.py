@@ -17,6 +17,5 @@ class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         result = [[]]
         
-        solution(nums, result)
-        
+        solution(nums, result)  
         return result
