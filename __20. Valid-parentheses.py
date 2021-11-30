@@ -4,7 +4,6 @@ class Solution:
         s = list(s)
         previos_remove = True
 
-
         # checking if counter of the brackets are odd
         if len(s) % 2 != 0:
             return False
