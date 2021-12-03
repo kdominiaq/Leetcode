@@ -1,6 +1,6 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        # variable
+        # variable 
         s = list(s)
         previos_remove = True
 
