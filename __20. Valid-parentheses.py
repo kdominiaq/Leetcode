@@ -9,7 +9,7 @@ class Solution:
             return False
         
         else:
-            # checking previos iteration, if none of if statment happend stop thwe while, bbecasue anything in "s" is the               pair of brackets
+            # checking previos iteration, if none of if statment happend stop thwe while, bbecasue anything in "s" is the pair of brackets
             while previos_remove:
                 previos_remove = False
                 
